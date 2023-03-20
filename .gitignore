@@ -22,7 +22,8 @@ desktop.ini
 # Ignore Builds & Binaries
 ###############################################################################
 
-INTERNAL/
+_PupWin/
+PupWin/
 
 # Bin, Obj, Out, Output
 **/[Bb][Ii][Nn]/

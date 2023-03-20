@@ -9,7 +9,7 @@
 **Hello World** is a C# demonstration project for use with the [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy)
 command-line utility.
 
-## What is PupNet Deploy? ##
+### What is PupNet Deploy? ###
 **PupNet** is cross-platform deployment utility that will publish your .NET project and package the output as a
 ready-to-ship installation file in a single step.
 
@@ -36,7 +36,7 @@ the build system, to the application.
 
 Clone this repository to your local drive.
 
-Install [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy), along with prerequisites. Follow the instructions.
+Install [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy), along with prerequisites.
 
 At the solution directory, under Linux:
 

@@ -40,17 +40,17 @@ Install [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy), along with
 
 At the solution directory, under Linux:
 
-    pupnet -k appimage
+    pupnet -k appimage --verbose
 
-    pupnet -k flatpak
+    pupnet -k flatpak --verbose
 
-    pupnet -k deb
+    pupnet -k deb --verbose
 
-    pupnet -k rpm
+    pupnet -k rpm --verbose
 
 Under Windows:
 
-    pupnet -k setup
+    pupnet -k setup --verbose
 
 See the [PupNet Deploy Project](https://github.com/kuiperzone/PupNet-Deploy) for complete instructions and information.
 

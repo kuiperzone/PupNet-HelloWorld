@@ -20,7 +20,7 @@ It can be built for all package kinds, including AppImage, Flatpak, DEB and RPM 
 and as a Setup file on Windows. It provides an example of using desktop and AppStream metadata files,
 as well as icons and a post-publish script.
 
-You will notice, for example, that this AppStream metadata file and associated desktop file make
+You will notice, for example, that it has an AppStream metadata file and associated desktop file make
 use of macro variables for a high degree of content automation, so that information need only be
 specified once in the primary configuration.
 

@@ -6,7 +6,7 @@
 
 ## Introduction ##
 
-**Hello World** is a C# demonstration project for use with the (PupNet Deploy)[https://github.com/kuiperzone/PupNet-Deploy]
+**Hello World** is a C# demonstration project for use with the [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy)
 command-line utility.
 
 ## What is PupNet Deploy? ##
@@ -20,8 +20,6 @@ It can be built for all package kinds, including AppImage, Flatpak, DEB and RPM 
 and as a Setup file on Windows. It provides an example of using desktop and AppStream metadata files,
 as well as icons and a post-publish script.
 
-FOR INSTRUCTIONS: (PupNet Deploy)[https://github.com/kuiperzone/PupNet-Deploy]
-
 You will notice, for example, that this AppStream metadata file and associated desktop file make
 use of macro variables for a high degree of content automation, so that information need only be
 specified once in the primary configuration.
@@ -33,6 +31,28 @@ specified once in the primary configuration.
 On execution, the Hello World program displays command arguments and assembly information. The assembly
 version confirms that version information may be provided in the deployment configuration, and passed through
 the build system, to the application.
+
+## Instructions ##
+
+Clone this repository to your local drive.
+
+Install [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy), along with prerequisites. Follow the instructions.
+
+At the solution directory, under Linux:
+
+    pupnet -k appimage
+
+    pupnet -k flatpak
+
+    pupnet -k deb
+
+    pupnet -k rpm
+
+Under Windows:
+
+    pupnet -k setup
+
+See the [PupNet Deploy Project](https://github.com/kuiperzone/PupNet-Deploy) for complete instructions and information.
 
 **PupNet Deploy** was created by Andy Thomas at [https://kuiper.zone](https://kuiper.zone).
 

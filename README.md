@@ -10,19 +10,19 @@
 command-line utility.
 
 ### What is PupNet Deploy? ###
-**PupNet** is cross-platform deployment utility that will publish your .NET project and package the output as a
-ready-to-ship installation file in a single step.
+**PupNet Deploy** is a cross-platform deployment utility publishes your .NET project and
+packages it as a ready-to-ship installation file in a single step.
 
 ## About this Application ##
 
 Hello World demonstrates all the major features of building distributable packages with PupNet.
 It can be built for all package kinds, including AppImage, Flatpak, DEB and RPM formats on Linux,
 and as a Setup file on Windows. It provides an example of using desktop and AppStream metadata files,
-as well as icons and a post-publish script.
+as well as icons and post-publish scripts.
 
-You will notice, for example, that it has an AppStream metadata file and associated desktop file make
-use of macro variables for a high degree of content automation, so that information need only be
-specified once in the primary configuration.
+You will notice, for example, that it has an AppStream metadata file and associated desktop file, both
+of which make use of macro variables for a high degree of content automation, so that information need
+only be specified once in the primary configuration.
 
 <p style="text-align:left;">
     <img src="Media/Screenshot.png" style="width:50%;max-width:2000px"/>
@@ -51,6 +51,15 @@ At the solution directory, under Linux:
 Under Windows:
 
     pupnet -k setup
+
+To test the specifying a custom flag:
+
+    pupnet -k appimage --property DefineConstants=CUSTOM_FLAG
+
+In this case, the Hello World program will output the following when built, installed and run:
+
+    CUSTOM_FLAG defined OK
+    pupnet was called with: --property DefineConstants=CUSTOM_FLAG;
 
 See the [PupNet Deploy Project](https://github.com/kuiperzone/PupNet-Deploy) for complete instructions and information.
 

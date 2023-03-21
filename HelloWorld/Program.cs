@@ -56,14 +56,14 @@ namespace HelloWorld
             Console.WriteLine("If the above is 'True', it indicates the PostPublish build script was run during the build");
             Console.WriteLine();
 
-#if BUILDFLAG
+#if CUSTOM_FLAG
             // Test for passing property from command line
             // NOTE. In some case, you might have to do a clean first
-            Console.WriteLine("BUILDFLAG constant defined OK");
-            Console.WriteLine("The build was called with --property:DefineConstants=BUILDFLAG");
+            Console.WriteLine("CUSTOM_FLAG defined OK");
+            Console.WriteLine("pupnet was called with: --property DefineConstants=CUSTOM_FLAG");
 #else
-            Console.WriteLine("BUILDFLAG NOT defined");
-            Console.WriteLine("Build package with publish arg: --property:DefineConstants=BUILDFLAG");
+            Console.WriteLine("CUSTOM_FLAG NOT defined");
+            Console.WriteLine("pupnet was NOT called with: --property DefineConstants=CUSTOM_FLAG");
 #endif
 
             Console.WriteLine();

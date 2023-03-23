@@ -10,7 +10,7 @@
 command-line utility.
 
 ### What is PupNet Deploy? ###
-**PupNet Deploy** is a cross-platform deployment utility publishes your .NET project and
+**PupNet Deploy** is a cross-platform deployment utility which publishes your .NET project and
 packages it as a ready-to-ship installation file in a single step.
 
 ## About this Application ##

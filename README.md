@@ -61,6 +61,9 @@ In this case, the Hello World program will output the following when built, inst
     CUSTOM_FLAG defined OK
     pupnet was called with: --property DefineConstants=CUSTOM_FLAG;
 
+The application runs in the terminal so, with AppImage, run the program from the command-line rather than
+double-clicking from a file manager to see the output.
+
 See the [PupNet Deploy Project](https://github.com/kuiperzone/PupNet-Deploy) for complete instructions and information.
 
 **PupNet Deploy** was created by Andy Thomas at [https://kuiper.zone](https://kuiper.zone).

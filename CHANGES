@@ -1,0 +1,7 @@
++ Version 1.0.1; 2023-03-26
+- Programs now asks for key-press only on Windows
+- Set version correctly
+
++ Version 1.0.0; 2023-03-22
+- Initial release
+- Reports version as "3.2.1". This was intentional at the time by way of demonstration.

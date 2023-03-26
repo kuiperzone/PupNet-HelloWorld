@@ -19,6 +19,7 @@
 using System;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace HelloWorld
 {
@@ -66,10 +67,14 @@ namespace HelloWorld
             Console.WriteLine("pupnet was NOT called with: --property DefineConstants=CUSTOM_FLAG");
 #endif
 
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine("Press any key to finish");
-            Console.ReadKey(false);
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Press any key to finish");
+                Console.ReadKey(false);
+            }
+
             Console.WriteLine();
         }
 

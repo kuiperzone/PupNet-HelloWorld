@@ -1,6 +1,7 @@
 + Version 1.0.2; 2023-04-18
 - The pupnet.conf file upgraded to version 1.3.0
 - Now builds using .NET6, rather than .NET7 (you can change this in csproj file if needed)
+- Reinstated key-press to exit on all deployments
 
 + Version 1.0.1; 2023-03-26
 - Programs now asks for key-press only on Windows

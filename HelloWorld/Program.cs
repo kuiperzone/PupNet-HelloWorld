@@ -67,13 +67,12 @@ namespace HelloWorld
             Console.WriteLine("pupnet was NOT called with: --property DefineConstants=CUSTOM_FLAG");
 #endif
 
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("Press any key to finish");
-                Console.ReadKey(false);
-            }
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Press any key to finish");
+
+            // This line was proving problematic on arm64 AppImage (but have changed runtime since)
+            Console.ReadKey(false);
 
             Console.WriteLine();
         }

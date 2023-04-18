@@ -36,7 +36,7 @@ the build system, to the application.
 
 Clone this repository to your local drive.
 
-Install [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy), along with prerequisites.
+Install [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy), along with it's prerequisites.
 
 At the solution directory, under Linux:
 
@@ -52,17 +52,18 @@ Under Windows:
 
     pupnet -k setup
 
-To test the specifying a custom flag:
+To test specifying a custom flag:
 
     pupnet -k appimage --property DefineConstants=CUSTOM_FLAG
 
-In this case, the Hello World program will output the following when built, installed and run:
+This builds the program with the `#CUSTOM_FLAG` predefined macro. In this case, the Hello World program will output the
+following when built, installed and ran:
 
     CUSTOM_FLAG defined OK
     pupnet was called with: --property DefineConstants=CUSTOM_FLAG;
 
-The application runs in the terminal so, with AppImage, run the program from the command-line rather than
-double-clicking from a file manager to see the output.
+The application runs in the terminal, so run the program from the command-line rather than double-clicking from
+a file manager to see the output.
 
 See the [PupNet Deploy Project](https://github.com/kuiperzone/PupNet-Deploy) for complete instructions and information.
 

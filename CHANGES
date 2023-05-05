@@ -1,3 +1,25 @@
+This is a CHANGE (changelog) file. It may also serve as a README, but should include formatted
+information (below) to provide change information.
+
+Lines which start with '+' and contain one or more ';' characters are "version headers", and are of the form:
+'+ VERSION;[Other fields;]DATE'. The first item is the version number, while the last is the date in form 'yyyy-MM-dd'.
+Subsequent change items should be prefixed with '-'. Change items may span several lines, but a single change item
+should not be broken with an empty line.
+
+Format change information will be parsed and optionally used to populate AppStream '<release>' information element
+using the ${APPSTREAM_CHANGELOG_XML} macro. This means the version changes need now be specified in one place only
+(i.e. a changelog file). See the 'Deploy/app.metainfo.xml' file.
+
+The changelog parser should do a robust job at parsing version information while ignoring superfluous README text
+(such as this), but care should be taken to ensure that version information is correctly formatted.
+
++ Version 1.0.3; 2023-05-04
+- The pupnet.conf file upgraded to version 1.4.0
+- Added ${APPSTREAM_CHANGELOG_XML} to app.metainfo.xml
+- Added ${APPSTREAM_DESCRIPTION_XML} to app.metainfo.xml
+- Other minor corrections and changes
+- This line is deliberate test of escaping XML <>/" characters
+
 + Version 1.0.2; 2023-04-18
 - The pupnet.conf file upgraded to version 1.3.0
 - Now builds using .NET6, rather than .NET7 (you can change this in csproj file if needed)

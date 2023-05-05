@@ -13,18 +13,7 @@
     <launchable type="desktop-id">${APP_ID}.desktop</launchable>
 
     <description>
-        <p>Hello World demonstrates all the major features of building distributable packages with PupNet.
-        It can be built for all package kinds, including AppImage, Flatpak, DEB and RPM formats on Linux,
-        and as a Setup file on Windows. It provides an example of using desktop and AppStream metadata files,
-        as well as icons and post-publish scripts.</p>
-
-        <p>You will notice, for example, that this AppStream metadata file and associated desktop file, both of which</p>
-        <p> make use of macro variables for a high degree of content automation, so that information need only be
-        specified once in the primary configuration.</p>
-
-        <p>On execution, the Hello World program displays command arguments and assembly information. The assembly
-        version confirms that version information may be provided in the deployment configuration, and passed through
-        the build system, to the application.</p>
+        ${APPSTREAM_DESCRIPTION_XML}
     </description>
 
     <!-- Freedesktop Categories -->
@@ -44,9 +33,7 @@
     </screenshots>
 
     <releases>
-        <release version="${APP_VERSION}" date="${BUILD_DATE}">
-            <description><p>The latest release.</p></description>
-        </release>
+        ${APPSTREAM_CHANGELOG_XML}
     </releases>
 
 </component>

@@ -36,11 +36,13 @@ the build system, to the application.
 
 Clone this repository to your local drive.
 
-Install [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy), along with it's prerequisites.
+Install [PupNet Deploy](https://github.com/kuiperzone/PupNet-Deploy), along with its prerequisites.
 
-At the solution directory, under Linux:
+### Under Linux ###
 
-    pupnet -k appimage
+At the solution directory:
+
+    pupnet --kind appimage
 
     pupnet -k flatpak
 
@@ -48,22 +50,35 @@ At the solution directory, under Linux:
 
     pupnet -k rpm
 
-Under Windows:
+The package output kind defaults to `appimage` if omitted under Linux.
+
+### Under Windows ###
+
+At the solution directory:
 
     pupnet -k setup
 
-To test specifying a custom flag:
+It defaults to `setup` if omitted under Windows.
 
-    pupnet -k appimage --property DefineConstants=CUSTOM_FLAG
+## RUNNING THE APP ##
+The application runs in the terminal, so run the program from the command-line rather than double-clicking from
+a file manager to see the output.
 
-This builds the program with the `#CUSTOM_FLAG` predefined macro. In this case, the Hello World program will output the
-following when built, installed and ran:
+## BUILD WITH PROPERTIES ##
+The program prints different output according to whether the `#FLAG1` and `#FLAG2` macros are defined.
+This is intended to test that we can successfully pass properties during the pupnet build.
+
+To test set both flags at command line:
+
+    pupnet --property DefineConstants=FLAG1,FLAG2
+
+Use a comma (not semi-colon) and do not put a space between the values.
+
+In this case, the Hello World program will output the following when built and run:
 
     CUSTOM_FLAG defined OK
     pupnet was called with: --property DefineConstants=CUSTOM_FLAG;
 
-The application runs in the terminal, so run the program from the command-line rather than double-clicking from
-a file manager to see the output.
 
 See the [PupNet Deploy Project](https://github.com/kuiperzone/PupNet-Deploy) for complete instructions and information.
 

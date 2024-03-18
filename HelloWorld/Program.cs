@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------------------------------------
 // PROJECT   : PupNet
-// COPYRIGHT : Andy Thomas (C) 2022-23
+// COPYRIGHT : Andy Thomas (C) 2022-24
 // LICENSE   : GPL-3.0-or-later
 // HOMEPAGE  : https://github.com/kuiperzone/PupNet
 //
@@ -16,10 +16,7 @@
 // with PupNet. If not, see <https://www.gnu.org/licenses/>.
 // -----------------------------------------------------------------------------
 
-using System;
-using System.IO;
 using System.Reflection;
-using System.Runtime.InteropServices;
 
 namespace HelloWorld
 {
@@ -50,21 +47,33 @@ namespace HelloWorld
             Console.WriteLine("Assembly.GetEntryAssembly().Location: {0}", Assembly.GetEntryAssembly()?.Location ?? "null");
             Console.WriteLine();
 
-            // Look for sub-directory created by DotnetPostPublish - ensures custom content is packaged
+
+            // Look for sub-directory created by DotnetPostPublish conf parameter
+            // This ensures custom content is packaged.
+            Console.WriteLine("POST PUBLISH");
             dir = Path.Combine(dir, "subdir");
             Console.WriteLine("Packaged subdir exists: " + Directory.Exists(dir));
             Console.WriteLine("Packaged subdir/file.test exists: " + File.Exists(Path.Combine(dir, "file.test")));
-            Console.WriteLine("If the above is 'True', it indicates the PostPublish build script was run during the build");
-            Console.WriteLine();
+            Console.WriteLine("If the above is 'True', it indicates the DotnetPostPublish script was run during the build");
 
-#if CUSTOM_FLAG
-            // Test for passing property from command line
-            // NOTE. In some case, you might have to do a clean first
-            Console.WriteLine("CUSTOM_FLAG defined OK");
-            Console.WriteLine("pupnet was called with: --property DefineConstants=CUSTOM_FLAG");
+
+            // Test for passing property from command line when publishing project
+            Console.WriteLine();
+            Console.WriteLine("PUBLISH PROPERTIES");
+#if FLAG1
+            Console.WriteLine("FLAG1 defined OK!!!");
+            Console.WriteLine("pupnet was called with: --property DefineConstants=FLAG1");
 #else
-            Console.WriteLine("CUSTOM_FLAG NOT defined");
-            Console.WriteLine("pupnet was NOT called with: --property DefineConstants=CUSTOM_FLAG");
+            Console.WriteLine("FLAG1 NOT defined");
+            Console.WriteLine("pupnet was NOT called with: --property DefineConstants=FLAG1");
+#endif
+            Console.WriteLine();
+#if FLAG2
+            Console.WriteLine("FLAG2 defined OK!!!");
+            Console.WriteLine("pupnet was called with: --property DefineConstants=FLAG2");
+#else
+            Console.WriteLine("FLAG2 NOT defined");
+            Console.WriteLine("pupnet was NOT called with: --property DefineConstants=FLAG2");
 #endif
 
             Console.WriteLine();

@@ -13,13 +13,13 @@ using the ${APPSTREAM_CHANGELOG_XML} macro. This means the version changes need 
 The changelog parser should do a robust job at parsing version information while ignoring superfluous README text
 (such as this), but care should be taken to ensure that version information is correctly formatted.
 
-+ Version 1.0.4; 2024-03-18
++ 1.0.4; 2024-03-18
 - Updated for pupnet 1.8.0.
 - Add multiple checks for DefineConstants.
 - Project file updated to .NET8.
 
 
-+ Version 1.0.3; 2023-05-04
++ 1.0.3; 2023-05-04
 - The pupnet.conf file upgraded to version 1.4.0
 - Added ${APPSTREAM_CHANGELOG_XML} to app.metainfo.xml
 - Added ${APPSTREAM_DESCRIPTION_XML} to app.metainfo.xml
@@ -27,17 +27,17 @@ The changelog parser should do a robust job at parsing version information while
 - This line is deliberate test of escaping XML <>/" characters
 
 
-+ Version 1.0.2; 2023-04-18
++ 1.0.2; 2023-04-18
 - The pupnet.conf file upgraded to version 1.3.0
 - Now builds using .NET6, rather than .NET7 (you can change this in csproj file if needed)
 - Reinstated key-press to exit on all deployments
 
 
-+ Version 1.0.1; 2023-03-26
++ 1.0.1; 2023-03-26
 - Programs now asks for key-press only on Windows
 - Reports version correctly as 1.0.1
 
 
-+ Version 1.0.0; 2023-03-22
++ 1.0.0; 2023-03-22
 - Initial release
 - Reports version as "3.2.1". This was intentional at the time by way of demonstration.

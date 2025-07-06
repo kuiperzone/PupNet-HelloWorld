@@ -35,17 +35,26 @@ namespace HelloWorld
 
             // Ensure arguments are passed
             Console.WriteLine("Args: {0}", string.Join(", ", args));
+            Console.WriteLine();
 
-            // Working directory
+            Console.WriteLine("WORKING DIRECTORY");
             Console.WriteLine("GetCurrentDirectory: {0}", Directory.GetCurrentDirectory());
+            Console.WriteLine();
 
-            // Executable directory
+            Console.WriteLine("HOME");
+            Console.WriteLine("Environment.SpecialFolder.UserProfile: {0}", Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+            Console.WriteLine();
+
             var dir = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine("EXECUTABLE DIRECTORY");
             Console.WriteLine("AppDomain.CurrentDomain.BaseDirectory: {0}", AppDomain.CurrentDomain.BaseDirectory);
+            Console.WriteLine();
 
             // Executable path (warning IL3000 for "single-file" is expected)
+            Console.WriteLine("ENTRY ASSEMBLY");
             Console.WriteLine("Assembly.GetEntryAssembly().Location: {0}", Assembly.GetEntryAssembly()?.Location ?? "null");
             Console.WriteLine();
+
 
 
             // Look for sub-directory created by DotnetPostPublish conf parameter

@@ -13,6 +13,10 @@ using the ${APPSTREAM_CHANGELOG_XML} macro. This means the version changes need 
 The changelog parser should do a robust job at parsing version information while ignoring superfluous README text
 (such as this), but care should be taken to ensure that version information is correctly formatted.
 
++ 1.0.5; 2026-04-11
+- Updated for pupnet 1.10.0.
+- Project file updated to .NET10.0.
+
 + 1.0.4; 2024-03-18
 - Updated for pupnet 1.8.0.
 - Add multiple checks for DefineConstants.
